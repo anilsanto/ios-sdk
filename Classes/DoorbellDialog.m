@@ -263,7 +263,7 @@ NSString * const DoorbellSite = @"http://doorbell.io";
     UIColor *brandColor = self.primaryColor
     ? self.primaryColor
     : [UIColor colorWithRed:91/255.0f green:192/255.0f blue:222/255.0f alpha:1.0f];
-    UIColor * titleColor = self.titleColor ? self.tintColor : [UIColor colorWithRed:91/255.0f green:192/255.0f blue:222/255.0f alpha:1.0f];
+    UIColor * titleColor = self.titleColor ? self.titleColor : [UIColor colorWithRed:91/255.0f green:192/255.0f blue:222/255.0f alpha:1.0f];
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(20.0f, 10.0f, 200.0f, 20.0f)];
     titleLabel.text = NSLocalizedString(@"Feedback", nil);
     titleLabel.font = self.titleFont
