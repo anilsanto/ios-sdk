@@ -263,7 +263,7 @@ NSString * const DoorbellSite = @"http://doorbell.io";
     UIColor *brandColor = self.primaryColor
     ? self.primaryColor
     : [UIColor colorWithRed:91/255.0f green:192/255.0f blue:222/255.0f alpha:1.0f];
-
+    UIColor * titleColor = self.titleColor ? self.tintColor : [UIColor colorWithRed:91/255.0f green:192/255.0f blue:222/255.0f alpha:1.0f];
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(20.0f, 10.0f, 200.0f, 20.0f)];
     titleLabel.text = NSLocalizedString(@"Feedback", nil);
     titleLabel.font = self.titleFont
@@ -271,7 +271,7 @@ NSString * const DoorbellSite = @"http://doorbell.io";
     : [UIFont boldSystemFontOfSize:18.0f];
 
     titleLabel.textAlignment = NSTextAlignmentLeft;
-    titleLabel.textColor = brandColor;
+    titleLabel.textColor = titleColor;
 
     [_boxView addSubview:titleLabel];
 
@@ -365,7 +365,7 @@ NSString * const DoorbellSite = @"http://doorbell.io";
 
     [_boxView addSubview:_poweredBy];
 
-    UIColor * cancelColor = [UIColor colorWithRed:0.95 green:0.2 blue:0.2 alpha:1];
+    UIColor * cancelColor = self.buttonTextColor ? self.buttonTextColor : [UIColor colorWithRed:0.95 green:0.2 blue:0.2 alpha:1];
     _cancelButton = [UIButton buttonWithType:UIButtonTypeCustom];
     _cancelButton.frame = CGRectMake(0.0f, 211.0f, 150.0f, 44.0f);
     _cancelButton.titleLabel.font = [UIFont boldSystemFontOfSize:14.0f];
@@ -379,12 +379,12 @@ NSString * const DoorbellSite = @"http://doorbell.io";
     //_cancelButton.layer.borderColor = [UIColor lightGrayColor].CGColor;
     //_cancelButton.layer.borderWidth = .5f;
 
-
+    UIColor * sendColor = self.buttonTextColor ? self.buttonTextColor : [UIColor colorWithRed:0.95 green:0.2 blue:0.2 alpha:1];
     _sendButton = [UIButton buttonWithType:UIButtonTypeCustom];
     _sendButton.frame = CGRectMake(150.0f, 211.0f, 150.0f, 44.0f);
-    _sendButton.titleLabel.font = [UIFont boldSystemFontOfSize:14.0f];
+    _sendButton.titleLabel.font = self.buttonFont ? self.buttonFont : [UIFont boldSystemFontOfSize:14.0f];
     [_sendButton setTitle:NSLocalizedString(@"Send", nil) forState:UIControlStateNormal];
-    [_sendButton setTitleColor:brandColor forState:UIControlStateNormal];
+    [_sendButton setTitleColor:sendColor forState:UIControlStateNormal];
     [_sendButton setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
 
     [_sendButton setBackgroundImage:[self imageWithColor:brandColor] forState:UIControlStateHighlighted];

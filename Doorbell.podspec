@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   s.author    = "Anil Santo"
   s.social_media_url   = "https://twitter.com/doorbell_io"
   s.platform     = :ios, "5.0"
-  s.source       = { :git => "https://github.com/doorbell/ios-sdk.git", :tag => "0.0.8" }
+  s.source       = { :git => "https://github.com/anilsanto/ios-sdk.git", :tag => "0.0.8" }
   s.source_files  = "Classes"
   s.framework  = "QuartzCore"
   s.requires_arc = true

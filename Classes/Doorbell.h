@@ -7,8 +7,11 @@ typedef void (^DoorbellCompletionBlock)(NSError *error, BOOL isCancelled);
 @interface Doorbell : NSObject
 
 @property (strong, nonatomic)   UIColor * primaryColor;
+@property (strong, nonatomic)   UIColor * titleColor;
+@property (strong, nonatomic)   UIColor * buttonTextColor;
 @property (strong, nonatomic)   UIFont * titleFont;
 @property (strong, nonatomic)   UIFont * textFont;
+@property (strong, nonatomic)   UIFont * buttonFont;
 
 @property (strong, nonatomic)   NSString *apiKey;
 @property (strong, nonatomic)   NSString *appID;
