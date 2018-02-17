@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 
-  s.name         = "Anil-Doorbell"
+  s.name         = "Doorbell"
   s.version      = "0.0.8"
   s.summary      = "In-app user feedback gathering SDK for Doorbell.io"
   s.description  = "Easily gather in-app feedback from your users, for free!"
