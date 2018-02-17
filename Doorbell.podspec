@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.description  = "Easily gather in-app feedback from your users, for free!"
   s.homepage     = "https://doorbell.io"
   s.license      = "MIT"
-  s.author    = "manavo"
+  s.author    = "Anil Santo"
   s.social_media_url   = "https://twitter.com/doorbell_io"
   s.platform     = :ios, "5.0"
   s.source       = { :git => "https://github.com/doorbell/ios-sdk.git", :tag => "0.0.8" }
